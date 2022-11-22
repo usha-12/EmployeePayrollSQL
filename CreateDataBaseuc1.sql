@@ -1,1 +1,0 @@
-CREATE DATABASE Employee_payroll_service2;
