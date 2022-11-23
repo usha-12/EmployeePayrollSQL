@@ -39,5 +39,10 @@ ADD Address varchar(250),
 ADD Department varchar(250) not null;
 UPDATE Employee_Payroll_service SET Address='INDIA';
 UPDATE Employee_Payroll_service SET Department='Finance';
-
+SELECT * FROM Employee_Payroll_service;
+UPDATE  Employee_Payroll_service set Phone='453267899',Address='chennai' where Name='Aditya';
+UPDATE  Employee_Payroll_service set Phone='453267899',Address='Mumbai' where Name='Tusar';
+UPDATE  Employee_Payroll_service set Phone='453267899',Address='Banglore' where Name='Sanket';
+UPDATE  Employee_Payroll_service set Department='HR'where Name='Aditya';
+UPDATE 	Employee_Payroll_service set Department='Sales'where Name='Tusar';
 SELECT * FROM Employee_Payroll_service;
