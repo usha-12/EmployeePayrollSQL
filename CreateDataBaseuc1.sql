@@ -39,5 +39,22 @@ ADD Address varchar(250),
 ADD Department varchar(250) not null;
 UPDATE Employee_Payroll_service SET Address='INDIA';
 UPDATE Employee_Payroll_service SET Department='Finance';
-
 SELECT * FROM Employee_Payroll_service;
+
+UPDATE  Employee_Payroll_service set Phone='453267899',Address='chennai' where Name='Aditya';
+UPDATE  Employee_Payroll_service set Phone='453267899',Address='Mumbai' where Name='Tusar';
+UPDATE  Employee_Payroll_service set Phone='453267899',Address='Banglore' where Name='Sanket';
+UPDATE  Employee_Payroll_service set Department='HR'where Name='Aditya';
+UPDATE 	Employee_Payroll_service set Department='Sales'where Name='Tusar';
+
+Exec sp_rename 'Employee_payroll2.Salary','BasicPay';
+alter table 	Employee_Payroll_service ADD  TaxablePay float, Deduction float,IncomeTax float,NetPay float;
+Update	Employee_Payroll_service set Deduction = '3000' where Department = 'HR';
+Update 	Employee_Payroll_service set Deduction = '5000' where Department = 'Finance';
+Update 	Employee_Payroll_service set Deduction = '6000' where Department = 'Sales';
+Update 	Employee_Payroll_service set TaxablePay = null; 
+Update	Employee_Payroll_service set IncomeTax = '2000'; 
+Update 	Employee_Payroll_service set NetPay = (BasicPay-Deduction);
+
+
+
