@@ -56,5 +56,13 @@ Update 	Employee_Payroll_service set TaxablePay = null;
 Update	Employee_Payroll_service set IncomeTax = '2000'; 
 Update 	Employee_Payroll_service set NetPay = (BasicPay-Deduction);
 
+INSERT INTO Employee_Payroll_service(Name,BasicPay,StartDate,Gender,Phone,Department,Address,TaxablePay,Deduction,IncomeTax)
+ VALUES('Aditya','50000','2022/08/11','male','5454321154','Marketing','Banglore','40000','5000','2000');
+ Update Employee_Payroll_service set NetPay = (BasicPay-Deduction) where Department='Marketing';
+ Update Employee_Payroll_service set TaxablePay='45000' where Name='Aditya';
+Update Employee_Payroll_service set TaxablePay='27000' where Name='Tusar';
+ Update Employee_Payroll_service set TaxablePay='54000' where Department='Sales';
+
+
 
 
