@@ -34,4 +34,10 @@ WHERE Gender = 'male' GROUP BY Gender;
 SELECT MAX(Salary) FROM Employee_Payroll_service
 WHERE Gender = 'male' GROUP BY Gender;
 
+ALTER TABLE Employee_Payroll_service ADD Phone bigint, 
+ADD Address varchar(250),
+ADD Department varchar(250) not null;
+UPDATE Employee_Payroll_service SET Address='INDIA';
+UPDATE Employee_Payroll_service SET Department='Finance';
+
 SELECT * FROM Employee_Payroll_service;
